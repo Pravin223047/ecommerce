@@ -2498,6 +2498,15 @@ i {
   .oimg {
     display: none;
   }
+      }
+
+@media screen and (max-width: 1080px) {
+  .online__img {
+    margin-left: 4rem !important;
+  }
+  .oimg {
+    display: none;
+  }
 }
 
 /* For medium devices */

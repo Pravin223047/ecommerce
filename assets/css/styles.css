@@ -2502,7 +2502,7 @@ i {
 
 @media screen and (max-width: 1080px) {
   .online__img {
-    margin-left: 4rem !important;
+    margin-left: 2rem !important;
   }
   .oimg {
     display: none;

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--=============== FLATICON ===============-->
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css"
+    />
+
+    <!--=============== SWIPER CSS ===============-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <title>Ecommerce Website</title>
+  </head>
+  <body>
+    <!--=============== HEADER ===============-->
+    <header class="header">
+      <div class="header__top">
+        <div class="header__container container">
+          <div class="header__contact">
+            <span>(+91) - 8956478563</span>
+            <span>Solapur-Maharashtra</span>
+          </div>
+          <p class="header__alert-news">EVARA - THE NO.1 ECOMMERCE WEBSITE</p>
+
+          <a href="login-register.html" class="header__top-action"
+            >Log-In/Sign-Up</a
+          >
+        </div>
+      </div>
+
+      <nav class="nav container">
+        <a href="index.html" class="nav__logo-img">
+          <img src="assets/img/logo.svg" alt="Error" />
+        </a>
+
+        <div class="nav__menu" id="nav-menu">
+          <div class="nav__menu-top">
+            <a href="index.html" class="nav__menu-logo">
+              <img src="assets/img/logo.svg" alt="" />
+            </a>
+
+            <div class="nav__close" id="nav-close">
+              <i class="fi fi-rs-cross-small"></i>
+            </div>
+          </div>
+
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="index.html" class="nav__link active-link">Home</a>
+            </li>
+            <li class="nav__item">
+              <a href="shop.html" class="nav__link">Shop</a>
+            </li>
+            <li class="nav__item">
+              <a href="accounts.html" class="nav__link">My Account</a>
+            </li>
+            <li class="nav__item">
+              <a href="compare.html" class="nav__link">Compare</a>
+            </li>
+            <li class="nav__item">
+              <a href="login-register.html" class="nav__link">Login</a>
+            </li>
+          </ul>
+
+          <div class="header__search">
+            <input
+              type="text"
+              placeholder="Search for items..."
+              class="form__input"
+            />
+            <button class="search__btn">
+              <img src="assets/img/search.png" alt="" />
+            </button>
+          </div>
+        </div>
+
+        <div class="header__user-actions">
+          <a href="wishlist.html" class="header__action-btn">
+            <img src="assets/img/icon-heart.svg" alt="" />
+            <span class="count">3</span>
+          </a>
+          <a href="cart.html" class="header__action-btn">
+            <img src="assets/img/icon-cart.svg" alt="" />
+            <span class="count">3</span>
+          </a>
+
+          <div class="header__action-btn nav__toggle" id="nav-toggle">
+            <img src="assets/img/menu-burger.svg" alt="" />
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!--=============== MAIN ===============-->
+    <main class="main">
+      <!--=============== BREADCRUMB ===============-->
+      <section class="breadcrumb">
+        <ul class="breadcrumb__list flex container">
+          <li><a href="index.html" class="breadcrumb__link">Home</a></li>
+          <li><span class="breadcrumb__link">></span></li>
+          <li>
+            <a href="wishlist.html" class="breadcrumb__link shop">Login</a>
+          </li>
+        </ul>
+      </section>
+
+      <!--=============== LOGIN-REGISTER ===============-->
+      <section class="login-register section--lg container">
+        <div class="container1">
+          <div class="signin-signup">
+            <form action="" class="sign-in-form form1">
+              <h2 class="title">Login</h2>
+              <div class="input-field">
+                <i class="fi fi-rs-user"></i>
+                <input type="text" placeholder="Username" />
+              </div>
+              <div class="input-field">
+                <i class="fi fi-rs-lock"></i>
+                <input type="password" placeholder="Password" />
+              </div>
+              <input type="submit" value="Login" class="btn btn1" />
+              <p class="social-text">Or Login with social platform</p>
+              <div class="lr__social-links flex">
+                <a href="https://www.facebook.com/"
+                  ><i class="fi fi-brands-facebook lr__social-icon face"></i
+                ></a>
+                <a href="https://www.google.com/"
+                  ><i class="fi fi-brands-google lr__social-icon goog"></i
+                ></a>
+                <a href="https://www.linkedin.com/"
+                  ><i class="fi fi-brands-linkedin lr__social-icon link"></i
+                ></a>
+                <a href="https://twitter.com/i/flow/login"
+                  ><i class="fi fi-brands-twitter lr__social-icon twit"></i
+                ></a>
+              </div>
+              <p class="account-text">
+                Don't have an account? <a href="#" id="sign-up-btn2">Sign up</a>
+              </p>
+            </form>
+            <form action="" class="sign-up-form form1">
+              <h2 class="title">Register</h2>
+              <div class="input-field">
+                <i class="fi fi-rs-user"></i>
+                <input type="text" placeholder="Username" />
+              </div>
+              <div class="input-field">
+                <i class="fi fi-rs-envelope"></i>
+                <input type="text" placeholder="Email" />
+              </div>
+              <div class="input-field">
+                <i class="fi fi-rs-lock"></i>
+                <input type="password" placeholder="Password" />
+              </div>
+              <input type="submit" value="Register" class="btn btn1" />
+              <p class="social-text">Or Register with social platform</p>
+              <div class="lr__social-links flex">
+                <a href="https://www.facebook.com/"
+                  ><i class="fi fi-brands-facebook lr__social-icon face"></i
+                ></a>
+                <a href="https://www.google.com/"
+                  ><i class="fi fi-brands-google lr__social-icon goog"></i
+                ></a>
+                <a href="https://www.linkedin.com/"
+                  ><i class="fi fi-brands-linkedin lr__social-icon link"></i
+                ></a>
+                <a href="https://twitter.com/i/flow/login"
+                  ><i class="fi fi-brands-twitter lr__social-icon twit"></i
+                ></a>
+              </div>
+              <p class="account-text">
+                Already have an account?
+                <a href="#" id="sign-in-btn2">Sign in</a>
+              </p>
+            </form>
+          </div>
+          <div class="panels-container">
+            <div class="panel left-panel">
+              <div class="content">
+                <h3>New to Website?</h3>
+                <p>Click here to Login...</p>
+                <button class="btn btn1" id="sign-in-btn">Sign in</button>
+              </div>
+              <img src="assets/img/login.png" alt="" class="image" />
+            </div>
+            <div class="panel right-panel">
+              <div class="content">
+                <h3>Want To Buy Product?</h3>
+                <p>Click here to Register...</p>
+                <button class="btn btn1" id="sign-up-btn">Sign up</button>
+              </div>
+              <img src="assets/img/register.png" alt="" class="image" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--=============== NEWSLETTER ===============-->
+      <section class="newsletter section">
+        <div class="newsletter__container container grid">
+          <h3 class="newsletter__title flex">
+            <img
+              src="assets/img/icon-email.svg"
+              alt=""
+              class="newsletter__icon"
+            />
+
+            Sign up to Newsletter
+          </h3>
+          <p class="newsletter__description">
+            ...and recieve $25 coupon for first shopping
+          </p>
+
+          <form action="" class="newsletter__form">
+            <input
+              type="email"
+              placeholder="Enter your email..."
+              class="newsletter__input"
+              required
+            />
+            <button type="submit" class="newsletter__btn">Subscribe</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!--=============== FOOTER ===============-->
+    <footer class="footer">
+      <div class="footer__container grid container">
+        <div class="footer__content">
+          <a href="index.html" class="footer__logo">
+            <img src="assets/img/logo.svg" alt="" class="footer__logo-img" />
+          </a>
+
+          <h4 class="footer__subtitle">Contact</h4>
+          <p class="footer__description">
+            <span>Address:</span> New paccha peth, Ashok Chowk, Solapur-413005
+          </p>
+          <p class="footer__description">
+            <span>Phone:</span>(+91) - 8956478563
+          </p>
+          <p class="footer__description">
+            <span>Hours:</span> 10:00 - 20:00, Mon-Sat
+          </p>
+
+          <div class="footer__social">
+            <h4 class="footer__subtitle">Follow Us</h4>
+
+            <div class="footer__social-links flex">
+              <a href="https://www.facebook.com/"
+                ><i class="fi fi-brands-facebook footer__social-icon face"></i
+              ></a>
+              <a href="https://www.instagram.com/"
+                ><i class="fi fi-brands-instagram footer__social-icon inst"></i
+              ></a>
+              <a href="https://www.youtube.com/"
+                ><i class="fi fi-brands-youtube footer__social-icon yout"></i
+              ></a>
+              <a href="https://twitter.com/i/flow/login"
+                ><i class="fi fi-brands-twitter footer__social-icon twit"></i
+              ></a>
+              <a href="https://in.pinterest.com/"
+                ><i class="fi fi-brands-pinterest footer__social-icon pint"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__content">
+          <h3 class="footer__title">Address</h3>
+          <ul class="footer__links">
+            <li><a href="" class="footer__link">About us</a></li>
+            <li><a href="" class="footer__link">Delivery Information</a></li>
+            <li><a href="" class="footer__link">Privacy Policy</a></li>
+            <li><a href="" class="footer__link">Terms and condition</a></li>
+            <li><a href="" class="footer__link">Contact Us</a></li>
+            <li><a href="" class="footer__link">Support Center</a></li>
+          </ul>
+        </div>
+        <div class="footer__content">
+          <h3 class="footer__title">My Account</h3>
+          <ul class="footer__links">
+            <li><a href="" class="footer__link">Sign In</a></li>
+            <li><a href="" class="footer__link">View Cart</a></li>
+            <li><a href="" class="footer__link">My Wishlist</a></li>
+            <li><a href="" class="footer__link">Track my Order</a></li>
+            <li><a href="" class="footer__link">Help</a></li>
+            <li><a href="" class="footer__link">Order</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__content">
+          <h3 class="footer__title">Secured Payment Gateways</h3>
+          <img
+            src="assets/img/payment-method.png"
+            alt=""
+            class="payment__img"
+          />
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="copyright">&copy; 2023 Evara. All rights reserved</p>
+        <span class="designer">Designed by Pravin-Kshirsagar</span>
+      </div>
+    </footer>
+
+    <!--=============== SWIPER JS ===============-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+    <script>
+      const sign_in_btn = document.querySelector("#sign-in-btn");
+      const sign_up_btn = document.querySelector("#sign-up-btn");
+      const container = document.querySelector(".container1");
+      const sign_in_btn2 = document.querySelector("#sign-in-btn2");
+      const sign_up_btn2 = document.querySelector("#sign-up-btn2");
+
+      sign_up_btn.addEventListener("click", () => {
+        container.classList.add("sign-up-mode");
+      });
+      sign_in_btn.addEventListener("click", () => {
+        container.classList.remove("sign-up-mode");
+      });
+      sign_up_btn2.addEventListener("click", () => {
+        container.classList.add("sign-up-mode2");
+      });
+      sign_in_btn2.addEventListener("click", () => {
+        container.classList.remove("sign-up-mode2");
+      });
+    </script>
+  </body>
+</html>

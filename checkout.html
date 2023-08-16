@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--=============== FLATICON ===============-->
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css"
+    />
+
+    <!--=============== SWIPER CSS ===============-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <title>Ecommerce Website</title>
+  </head>
+  <body>
+    <!--=============== HEADER ===============-->
+    <header class="header">
+      <div class="header__top">
+        <div class="header__container container">
+          <div class="header__contact">
+            <span>(+91) - 8956478563</span>
+            <span>Solapur-Maharashtra</span>
+          </div>
+          <p class="header__alert-news">EVARA - THE NO.1 ECOMMERCE WEBSITE</p>
+
+          <a href="login-register.html" class="header__top-action"
+            >Log-In/Sign-Up</a
+          >
+        </div>
+      </div>
+
+      <nav class="nav container">
+        <a href="index.html" class="nav__logo-img">
+          <img src="assets/img/logo.svg" alt="Error" />
+        </a>
+
+        <div class="nav__menu" id="nav-menu">
+          <div class="nav__menu-top">
+            <a href="index.html" class="nav__menu-logo">
+              <img src="assets/img/logo.svg" alt="" />
+            </a>
+
+            <div class="nav__close" id="nav-close">
+              <i class="fi fi-rs-cross-small"></i>
+            </div>
+          </div>
+
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="index.html" class="nav__link active-link">Home</a>
+            </li>
+            <li class="nav__item">
+              <a href="shop.html" class="nav__link">Shop</a>
+            </li>
+            <li class="nav__item">
+              <a href="accounts.html" class="nav__link">My Account</a>
+            </li>
+            <li class="nav__item">
+              <a href="compare.html" class="nav__link">Compare</a>
+            </li>
+            <li class="nav__item">
+              <a href="login-register.html" class="nav__link">Login</a>
+            </li>
+          </ul>
+
+          <div class="header__search">
+            <input
+              type="text"
+              placeholder="Search for items..."
+              class="form__input"
+            />
+            <button class="search__btn">
+              <img src="assets/img/search.png" alt="" />
+            </button>
+          </div>
+        </div>
+
+        <div class="header__user-actions">
+          <a href="wishlist.html" class="header__action-btn">
+            <img src="assets/img/icon-heart.svg" alt="" />
+            <span class="count">3</span>
+          </a>
+          <a href="cart.html" class="header__action-btn">
+            <img src="assets/img/icon-cart.svg" alt="" />
+            <span class="count">3</span>
+          </a>
+
+          <div class="header__action-btn nav__toggle" id="nav-toggle">
+            <img src="assets/img/menu-burger.svg" alt="" />
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!--=============== MAIN ===============-->
+    <main class="main">
+      <!--=============== BREADCRUMB ===============-->
+      <section class="breadcrumb">
+        <ul class="breadcrumb__list flex container">
+          <li><a href="index.html" class="breadcrumb__link">Home</a></li>
+          <li><span class="breadcrumb__link">></span></li>
+          <li>
+            <a href="cart.html" class="breadcrumb__link">Cart</a>
+          </li>
+          <li><span class="breadcrumb__link">></span></li>
+          <li>
+            <a href="checkout.html" class="breadcrumb__link shop">Checkout</a>
+          </li>
+        </ul>
+      </section>
+
+      <!--=============== CHECKOUT ===============-->
+      <section class="checkout section--lg container">
+        <div class="checkout__container container grid">
+          <div class="checkout__group">
+            <h3 class="section__title">Billing Details</h3>
+
+            <form action="" class="form grid">
+              <input type="text" placeholder="First Name" class="form__input" />
+              <input type="text" placeholder="Last Name" class="form__input" />
+              <input type="text" placeholder="Address" class="form__input" />
+              <input type="text" placeholder="City" class="form__input" />
+              <input type="text" placeholder="Country" class="form__input" />
+              <input type="text" placeholder="Postcode" class="form__input" />
+              <input type="text" placeholder="Phone" class="form__input" />
+              <input type="email" placeholder="Email" class="form__input" />
+
+              <h3 class="checkout__title">Additional Information</h3>
+
+              <textarea
+                name=""
+                id=""
+                cols="30"
+                rows="10"
+                placeholder="Order note"
+                class="form__input textarea"
+              ></textarea>
+            </form>
+
+            <div class="key__points oimg1">
+              <h3 class="pay__title">KEY-POINTS REGARDING PAYMENT SECURITY</h3>
+              <div class="payment__types">
+                <h2>Multiple Payment Option</h2>
+              </div>
+              <div class="payment__types">
+                <h2>Online Or Cash Payment</h2>
+              </div>
+              <div class="payment__types">
+                <h2>Secure Payment Processing</h2>
+              </div>
+              <div class="payment__types">
+                <h2>User-Friendly Checkout</h2>
+              </div>
+              <div class="payment__types">
+                <h2>Refund and Cancel Policy</h2>
+              </div>
+            </div>
+          </div>
+
+          <div class="checkout__group">
+            <h3 class="section__title">Cart Totals</h3>
+
+            <table class="order__table">
+              <tr>
+                <th colspan="2">Products</th>
+                <th>Total</th>
+              </tr>
+
+              <tr>
+                <td>
+                  <img
+                    src="assets/img/product-1-2.jpg"
+                    alt=""
+                    class="order__img"
+                  />
+                </td>
+
+                <td>
+                  <h3 class="table__title">Shirts-Mashroom Texture White</h3>
+                  <p class="table__quantity">x 2</p>
+                </td>
+
+                <td>
+                  <span class="table__price">$220</span>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <img
+                    src="assets/img/product-2-2.jpg"
+                    alt=""
+                    class="order__img"
+                  />
+                </td>
+
+                <td>
+                  <h3 class="table__title">Shirts-Colourful design Shirt</h3>
+                  <p class="table__quantity">x 2</p>
+                </td>
+
+                <td>
+                  <span class="table__price">$220</span>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <img
+                    src="assets/img/product-3-2.jpg"
+                    alt=""
+                    class="order__img"
+                  />
+                </td>
+
+                <td>
+                  <h3 class="table__title">Shoes-Gray Shoes</h3>
+                  <p class="table__quantity">x 1</p>
+                </td>
+
+                <td>
+                  <span class="table__price">$90</span>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <span class="order__subtitle">Sub-Total </span>
+                </td>
+                <td colspan="2"><span class="table__price">$280.00</span></td>
+              </tr>
+
+              <tr>
+                <td><span class="order__subtitle">Shipping</span></td>
+                <td colspan="2"><span class="table__price">$10.00</span></td>
+              </tr>
+
+              <tr>
+                <td><span class="order__subtitle">Total</span></td>
+                <td colspan="2">
+                  <span class="order__grand-total">$290.00</span>
+                </td>
+              </tr>
+            </table>
+
+            <div class="payment__methods">
+              <h3 class="checkout__title payment__title">Payment</h3>
+
+              <!-- <div class="paypal"> -->
+              <div class="paypal">
+                <div class="paypal__option flex" id="paypal__show">
+                  <input
+                    type="radio"
+                    name="paypal"
+                    id="radioo1"
+                    value="paypal"
+                    class="paypal__input"
+                  />
+                  <img
+                    src="assets/img/paypal.png"
+                    alt=""
+                    class="payment1__img"
+                  />
+                </div>
+              </div>
+
+              <div class="upi">
+                <div class="payment__option flex" id="radio--show">
+                  <input
+                    type="radio"
+                    name="radio"
+                    id="radiooo"
+                    value="upi"
+                    class="payment__input"
+                  />
+                  <img src="assets/img/upi.png" alt="" class="payment1__img" />
+                </div>
+                <button class="btn2 btn--sm" id="payment__option">X</button>
+                <div class="upi__methods" id="upi__methods">
+                  <h3 class="upi__title">UPI METHODS</h3>
+                  <div class="upi__details" style="display: none">
+                    <input
+                      type="radio"
+                      name="radio2"
+                      class="payment__input"
+                      id="radio2"
+                      value="g-pay"
+                    />
+                    <img
+                      src="assets/img/g-pay.png"
+                      alt=""
+                      class="payment1__img upi__img"
+                      id="image2"
+                      name="image2"
+                    />
+                  </div>
+                  <div class="upi__details" id="upi__details" name="radio2">
+                    <input
+                      type="radio"
+                      name="radio2"
+                      class="payment__input"
+                      id="radio2"
+                    />
+                    <img
+                      src="assets/img/g-pay.png"
+                      alt=""
+                      class="payment1__img upi__img"
+                      id="image2"
+                      name="image2"
+                      value="g-pay"
+                    />
+                  </div>
+                  <div class="upi__details" id="upi__details" name="radio2">
+                    <input
+                      type="radio"
+                      name="radio2"
+                      class="payment__input"
+                      id="radio2"
+                      value="phone-pay"
+                    />
+                    <img
+                      src="assets/img/phone-pay.png"
+                      alt=""
+                      class="payment1__img upi__img"
+                      id="image2"
+                      name="image2"
+                    />
+                  </div>
+                  <div class="upi__details" id="upi__details" name="radio2">
+                    <input
+                      type="radio"
+                      name="radio2"
+                      class="payment__input"
+                      id="radio2"
+                      value="apple-pay"
+                    />
+                    <img
+                      src="assets/img/apple-pay.png"
+                      alt=""
+                      class="payment1__img upi__img"
+                      id="image2"
+                      name="image2"
+                    />
+                  </div>
+                </div>
+                <div class="upi__type" id="upi__type">
+                  <p class="upi__title1">Payment Method :-</p>
+                  <div class="payment__option option flex">
+                    <input
+                      type="radio"
+                      name="radio1"
+                      id="radio1"
+                      class="payment__input"
+                      checked
+                    />
+                    <img
+                      src=""
+                      alt=""
+                      class="payment1__img"
+                      id="image1"
+                      name="image1"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card__option flex" id="radio__show">
+                  <input
+                    type="radio"
+                    name="radio"
+                    value="card"
+                    class="card__input"
+                    id="radioo"
+                  />
+                  <img
+                    src="assets/img/card.png"
+                    alt=""
+                    class="payment1__img"
+                    value="card"
+                    id="radio"
+                    style="scale: 1.8; margin-left: 2rem"
+                  />
+                </div>
+                <button class="btn3 btn--sm" id="card__option">X</button>
+                <div class="card__methods" id="card__methods">
+                  <h3 class="card__title">CARD METHODS</h3>
+                  <div class="card__details" style="display: none">
+                    <input
+                      type="radio"
+                      name="radio3"
+                      class="payment__input"
+                      id="radio3"
+                      value="mastercard"
+                    />
+                    <img
+                      src="assets/img/mastercard.png"
+                      alt=""
+                      class="payment1__img card__img"
+                      id="image3"
+                      name="image3"
+                    />
+                  </div>
+                  <div class="card__details" id="card__details" name="radio3">
+                    <input
+                      type="radio"
+                      name="radio3"
+                      class="payment__input"
+                      id="radio3"
+                    />
+                    <img
+                      src="assets/img/mastercard.png"
+                      alt=""
+                      class="payment1__img card__img"
+                      id="image3"
+                      name="image3"
+                      value="mastercard"
+                    />
+                  </div>
+                  <div class="card__details" id="card__details" name="radio3">
+                    <input
+                      type="radio"
+                      name="radio3"
+                      class="payment__input"
+                      id="radio3"
+                      value="maestro"
+                    />
+                    <img
+                      src="assets/img/maestro.png"
+                      alt=""
+                      class="payment1__img card__img"
+                      id="image3"
+                      name="image3"
+                    />
+                  </div>
+                </div>
+                <div class="card__type" id="card__type">
+                  <p class="card__title1">Payment Method :-</p>
+                  <div class="payment__option option flex">
+                    <input
+                      type="radio"
+                      name="radio4"
+                      id="radio4"
+                      class="payment__input"
+                      checked
+                    />
+                    <img
+                      src=""
+                      alt=""
+                      class="payment1__img"
+                      id="image4"
+                      name="image4"
+                    />
+                  </div>
+                </div>
+              </div>
+              <button class="btn btn--md">Place Order</button>
+            </div>
+
+            <img
+              src="assets/img/secure.png"
+              alt=""
+              class="online__img"
+              id="online"
+            />
+          </div>
+          <div class="key__points oimg">
+            <h3 class="pay__title">KEY-POINTS REGARDING PAYMENT SECURITY</h3>
+            <div class="payment__types">
+              <h2>Multiple Payment Option</h2>
+            </div>
+            <div class="payment__types">
+              <h2>Online Or Cash Payment</h2>
+            </div>
+            <div class="payment__types">
+              <h2>Secure Payment Processing</h2>
+            </div>
+            <div class="payment__types">
+              <h2>User-Friendly Checkout</h2>
+            </div>
+            <div class="payment__types">
+              <h2>Refund and Cancel Policy</h2>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--=============== NEWSLETTER ===============-->
+      <section class="newsletter section home__newsletter">
+        <div class="newsletter__container container grid">
+          <h3 class="newsletter__title flex">
+            <img
+              src="assets/img/icon-email.svg"
+              alt=""
+              class="newsletter__icon"
+            />
+
+            Sign up to Newsletter
+          </h3>
+          <p class="newsletter__description">
+            ...and recieve $25 coupon for first shopping
+          </p>
+
+          <form action="" class="newsletter__form">
+            <input
+              type="email"
+              placeholder="Enter your email..."
+              class="newsletter__input"
+              required
+            />
+            <button type="submit" class="newsletter__btn">Subscribe</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!--=============== FOOTER ===============-->
+    <footer class="footer">
+      <div class="footer__container grid container">
+        <div class="footer__content">
+          <a href="index.html" class="footer__logo">
+            <img src="assets/img/logo.svg" alt="" class="footer__logo-img" />
+          </a>
+
+          <h4 class="footer__subtitle">Contact</h4>
+          <p class="footer__description">
+            <span>Address:</span> New paccha peth, Ashok Chowk, Solapur-413005
+          </p>
+          <p class="footer__description">
+            <span>Phone:</span>(+91) - 8956478563
+          </p>
+          <p class="footer__description">
+            <span>Hours:</span> 10:00 - 20:00, Mon-Sat
+          </p>
+
+          <div class="footer__social">
+            <h4 class="footer__subtitle">Follow Us</h4>
+
+            <div class="footer__social-links flex">
+              <a href="https://www.facebook.com/"
+                ><i class="fi fi-brands-facebook footer__social-icon face"></i
+              ></a>
+              <a href="https://www.instagram.com/"
+                ><i class="fi fi-brands-instagram footer__social-icon inst"></i
+              ></a>
+              <a href="https://www.youtube.com/"
+                ><i class="fi fi-brands-youtube footer__social-icon yout"></i
+              ></a>
+              <a href="https://twitter.com/i/flow/login"
+                ><i class="fi fi-brands-twitter footer__social-icon twit"></i
+              ></a>
+              <a href="https://in.pinterest.com/"
+                ><i class="fi fi-brands-pinterest footer__social-icon pint"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__content">
+          <h3 class="footer__title">Address</h3>
+          <ul class="footer__links">
+            <li><a href="" class="footer__link">About us</a></li>
+            <li><a href="" class="footer__link">Delivery Information</a></li>
+            <li><a href="" class="footer__link">Privacy Policy</a></li>
+            <li><a href="" class="footer__link">Terms and condition</a></li>
+            <li><a href="" class="footer__link">Contact Us</a></li>
+            <li><a href="" class="footer__link">Support Center</a></li>
+          </ul>
+        </div>
+        <div class="footer__content">
+          <h3 class="footer__title">My Account</h3>
+          <ul class="footer__links">
+            <li><a href="" class="footer__link">Sign In</a></li>
+            <li><a href="" class="footer__link">View Cart</a></li>
+            <li><a href="" class="footer__link">My Wishlist</a></li>
+            <li><a href="" class="footer__link">Track my Order</a></li>
+            <li><a href="" class="footer__link">Help</a></li>
+            <li><a href="" class="footer__link">Order</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__content">
+          <h3 class="footer__title">Secured Payment Gateways</h3>
+          <img
+            src="assets/img/payment-method.png"
+            alt=""
+            class="payment__img"
+          />
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="copyright">&copy; 2023 Evara. All rights reserved</p>
+        <span class="designer">Designed by Pravin-Kshirsagar</span>
+      </div>
+    </footer>
+
+    <!--=============== SWIPER JS ===============-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script>
+      const radioHide = document.getElementById("payment__option");
+      const radioShow = document.getElementById("radio--show");
+      const upiMethods = document.getElementById("upi__methods");
+      const radio1 = document.getElementById("radio1");
+      const radio2Elements = document.querySelectorAll('[name="radio2"]');
+      const image1 = document.getElementById("image1");
+      const image2 = document.getElementById("image2");
+      const upiType = document.getElementById("upi__type");
+      const radiooo = document.getElementById("radiooo");
+      const online = document.getElementById("online");
+
+      radioHide.addEventListener("click", function () {
+        upiMethods.style.display = "none";
+        radioHide.style.display = "none";
+        online.style.display = "block";
+        radiooo.checked = false;
+      });
+
+      radioShow.addEventListener("click", function () {
+        upiMethods.style.display = "block";
+        radioHide.style.display = "block";
+        radio1Hide.style.display = "none";
+        upiType.style.display = "none";
+        cardType.style.display = "none";
+        cardMethods.style.display = "none";
+        online.style.display = "none";
+        radiooo.checked = true;
+        radio.checked = false;
+        radioo.checked = false;
+      });
+
+      radio2Elements.forEach((radioButton) => {
+        radioButton.addEventListener("click", function () {
+          radio1.value = this.value;
+          image2.src = this.parentElement.querySelector("img").src;
+          image1.src = image2.src;
+          upiMethods.style.display = "none";
+          radioHide.style.display = "none";
+          cardType.style.display = "none";
+          upiType.style.display = "flex";
+          online.style.display = "block";
+          online.style.width = "15rem";
+          online.style.marginLeft = "9.5rem";
+        });
+      });
+
+      const radio1Hide = document.getElementById("card__option");
+      const radio1Show = document.getElementById("radio__show");
+      const cardMethods = document.getElementById("card__methods");
+      const radio4 = document.getElementById("radio4");
+      const radio3 = document.querySelectorAll('[name="radio3"]');
+      const image4 = document.getElementById("image4");
+      const image3 = document.getElementById("image3");
+      const cardType = document.getElementById("card__type");
+      const radioo = document.getElementById("radioo");
+
+      radio1Hide.addEventListener("click", function () {
+        cardMethods.style.display = "none";
+        radio1Hide.style.display = "none";
+        online.style.display = "block";
+        radioo.checked = false;
+      });
+
+      radio1Show.addEventListener("click", function () {
+        cardMethods.style.display = "block";
+        radio1Hide.style.display = "block";
+        radioHide.style.display = "none";
+        upiMethods.style.display = "none";
+        upiType.style.display = "none";
+        cardType.style.display = "none";
+        online.style.display = "none";
+        radio.checked = false;
+        radiooo.checked = true;
+        radioo.checked = true;
+      });
+
+      radio3.forEach((radioButton) => {
+        radioButton.addEventListener("click", function () {
+          radio4.value = this.value;
+          image3.src = this.parentElement.querySelector("img").src;
+          image4.src = image3.src;
+          cardMethods.style.display = "none";
+          radio1Hide.style.display = "none";
+          cardType.style.display = "flex";
+          radioHide.style.display = "none";
+          upiType.style.display = "none";
+          online.style.display = "block";
+          online.style.width = "15rem";
+          online.style.marginLeft = "9.5rem";
+        });
+      });
+
+      const radio = document.getElementById("radioo1");
+      const paypalShow = document.getElementById("paypal__show");
+
+      paypalShow.addEventListener("click", function () {
+        radioHide.style.display = "none";
+        radio1Hide.style.display = "none";
+        upiMethods.style.display = "none";
+        cardMethods.style.display = "none";
+        upiType.style.display = "none";
+        cardType.style.display = "none";
+        radio.checked = true;
+        radioo.checked = false;
+        radiooo.checked = false;
+      });
+
+      document.addEventListener("click", function (event) {
+        const radioHide = document.getElementById("payment__option");
+        const radioShow = document.getElementById("radio--show");
+        const upiMethods = document.getElementById("upi__methods");
+        const radio1Hide = document.getElementById("card__option");
+        const radio1Show = document.getElementById("radio__show");
+        const cardMethods = document.getElementById("card__methods");
+
+        const targetElement = event.target;
+
+        if (
+          !radioShow.contains(targetElement) &&
+          !radioHide.contains(targetElement) &&
+          !upiMethods.contains(targetElement)
+        ) {
+          radioHide.style.display = "none";
+          upiMethods.style.display = "none";
+        }
+
+        if (
+          !radio1Show.contains(targetElement) &&
+          !radio1Hide.contains(targetElement) &&
+          !cardMethods.contains(targetElement)
+        ) {
+          radio1Hide.style.display = "none";
+          cardMethods.style.display = "none";
+        }
+      });
+
+      document.addEventListener("click", function (event) {
+        const online = document.getElementById("online");
+        const targetElement = event.target;
+
+        if (
+          !radioShow.contains(targetElement) &&
+          !radioHide.contains(targetElement) &&
+          !upiMethods.contains(targetElement) &&
+          !radio1Show.contains(targetElement) &&
+          !radio1Hide.contains(targetElement) &&
+          !cardMethods.contains(targetElement)
+        ) {
+          online.style.display = "flex";
+        }
+      });
+    </script>
+  </body>
+</html>

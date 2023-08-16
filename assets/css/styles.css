@@ -2500,15 +2500,6 @@ i {
   }
       }
 
-@media screen and (max-width: 1080px) {
-  .online__img {
-    display:none;
-  }
-  .oimg {
-    display: none;
-  }
-}
-
 /* For medium devices */
 @media screen and (max-width: 992px) {
   .container {

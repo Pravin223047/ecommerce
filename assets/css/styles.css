@@ -2923,11 +2923,15 @@ i {
 @media (max-width: 500px) {
   .btn2,
   .btn3 {
-    margin-left: 22.2rem !important;
+    display: none;
+  }
+
+  .payment__option button {
+    display: none;
   }
 
   .online__img {
-    margin-left: 4.5rem !important;
+    display: none;
   }
 }
 
@@ -3068,6 +3072,14 @@ i {
   .btn2,
   .btn3 {
     margin-left: 15.5rem !important;
+  }
+
+  #toast1 {
+    width: 300px;
+    height: 80px;
+    background: #fff;
+    font-weight: 500;
+    font-size: var(--h4-font-size);
   }
 }
 @media (max-width: 395px) {
@@ -3304,6 +3316,13 @@ i {
 }
 
 @media (max-width: 330px) {
+  #toast1 {
+    width: 250px;
+    height: 80px;
+    background: #fff;
+    font-weight: 500;
+    font-size: var(--h4-font-size);
+  }
   .online__img {
     margin-left: 0rem !important;
   }
@@ -3368,5 +3387,3 @@ i {
     font-size: var(--small-font-size);
   }
 }
-
-/*Responsive*/

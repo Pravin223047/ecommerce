@@ -112,4 +112,36 @@ tabs.forEach((tab) => {
   });
 });
 
-/*=============== LOGIN_REGISTER ===============*/
+let toastBox = document.getElementById("toastBox");
+let sucessMsg = `<i class="fa-solid fa-circle-check" ></i> Sucessfully submitted`;
+let errorMsg = `<i class="fa-solid fa-circle-xmark" ></i>Please fix the error`;
+let invalidMsg = `<i class="fa-solid fa-circle-exclamation" ></i>Invalid input, check again`;
+
+function showToast(msg) {
+  let toast = document.createElement("div");
+  toast.classList.add("toast");
+  toast.innerHTML = msg;
+  toastBox.appendChild(toast);
+
+  if (msg.includes("error")) {
+    toast.classList.add("error");
+  }
+  if (msg.includes("Invalid")) {
+    toast.classList.add("Invalid");
+  }
+
+  setTimeout(() => {
+    toast.remove();
+  }, 6000);
+}
+
+let refresh = 0;
+
+document.addEventListener("DOMContentLoaded", function () {
+  const toastElement = document.querySelector("#toast1");
+
+  setTimeout(() => {
+    toastElement.remove();
+    refresh = 1;
+  }, 4000);
+});

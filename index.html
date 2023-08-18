@@ -3,6 +3,80 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      /*********  TOAST NOTIFICATION ************/
+
+      .toast i {
+        margin: 0 20px;
+        font-size: 35px;
+        color: green;
+      }
+
+      #toast1::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 5px;
+        background: green;
+        animation: anim 3.8s linear forwards;
+      }
+
+      @keyframes anim {
+        100% {
+          width: 0;
+        }
+      }
+
+      /*Responsive*/
+
+      #toastBox {
+        position: fixed;
+        width: 100%;
+        justify-self: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        overflow: hidden;
+        z-index: 1000;
+      }
+      #toast1 {
+        width: 400px;
+        height: 80px;
+        background: #fff;
+        font-weight: 500;
+        font-size: var(--h3-font-size);
+        margin: 15px 0;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid black;
+        position: relative;
+        transform: translateY(-100%);
+        animation: moveleft 0.6s linear forwards;
+        z-index: 1000;
+      }
+
+      @keyframes moveleft {
+        100% {
+          transform: translateY(0);
+        }
+      }
+
+      .Notification {
+        top: 10px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid black;
+        height: 8rem;
+        width: 100%;
+      }
+    </style>
 
     <!--=============== FLATICON ===============-->
     <link
@@ -26,6 +100,9 @@
     <title>Ecommerce Website</title>
   </head>
   <body>
+    <div id="toastBox">
+      <div class="toast1" id="toast1">Welcome to our website!</div>
+    </div>
     <!--=============== HEADER ===============-->
     <header class="header">
       <div class="header__top">

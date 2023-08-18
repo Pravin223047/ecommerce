@@ -134,14 +134,3 @@ function showToast(msg) {
     toast.remove();
   }, 6000);
 }
-
-let refresh = 0;
-
-document.addEventListener("DOMContentLoaded", function () {
-  const toastElement = document.querySelector("#toast1");
-
-  setTimeout(() => {
-    toastElement.remove();
-    refresh = 1;
-  }, 4000);
-});

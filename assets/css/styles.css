@@ -3148,6 +3148,9 @@ i {
   form {
     width: 100%;
   }
+  .signin-signup {
+    margin: 20px 0;
+  }
   .online__img {
     margin-left: 0.4rem !important;
   }
@@ -3198,9 +3201,6 @@ i {
 @media (max-width: 375px) {
   form {
     width: 100%;
-  }
-  .signin-signup {
-    padding-top: 70px;
   }
   .online__img {
     margin-left: -0rem !important;

@@ -3199,6 +3199,9 @@ i {
   form {
     width: 100%;
   }
+  .signin-signup {
+    padding-top: 70px;
+  }
   .online__img {
     margin-left: -0rem !important;
   }

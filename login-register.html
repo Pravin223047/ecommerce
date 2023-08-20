@@ -22,10 +22,173 @@
 
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="assets/css/styles.css" />
+    <script
+      src="https://kit.fontawesome.com/c4254e24a8.js"
+      crossorigin="anonymous"
+    ></script>
 
     <title>Ecommerce Website</title>
   </head>
+  <style>
+    /*********  TOAST NOTIFICATION ************/
+
+    #toastBox {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      display: flex;
+      align-items: flex-end;
+      flex-direction: column;
+      overflow: hidden;
+      padding: 20px;
+      z-index: 1000;
+    }
+
+    .toast {
+      width: 400px;
+      height: 80px;
+      background: #fff;
+      font-weight: 500;
+      margin: 15px 0;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+      display: flex;
+      align-items: center;
+      border: 1px solid black;
+      position: relative;
+      transform: translateX(100%);
+      animation: moveleft 0.6s linear forwards;
+      z-index: 1000;
+    }
+
+    @keyframes moveleft {
+      100% {
+        transform: translateX(0);
+      }
+    }
+
+    .toast i {
+      margin: 0 20px;
+      font-size: 35px;
+      color: green;
+    }
+
+    .toast.error i {
+      color: red;
+    }
+
+    .toast.Invalid i {
+      color: orange;
+    }
+
+    .toast::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 5px;
+      background: green;
+      animation: anim 5.8s linear forwards;
+    }
+
+    @keyframes anim {
+      100% {
+        width: 0;
+      }
+    }
+
+    .toast.error::after {
+      background: red;
+    }
+
+    .toast.Invalid::after {
+      background: orange;
+    }
+
+    /* .input-field {
+      border: 2px solid red;
+    } */
+    .fields {
+      margin-top: 0;
+      display: flex;
+      align-items: center;
+      border: 2px solid rgb(255, 0, 0);
+      box-shadow: none;
+      background: transparent;
+      background-color: rgb(255, 223, 223);
+    }
+
+    #username__error,
+    #pass__error {
+      display: none;
+    }
+
+    #username1__error,
+    #email1__error,
+    #pass1__error {
+      display: none;
+    }
+
+    .fields i {
+      color: rgb(255, 0, 0);
+      border-radius: 50%;
+      height: 30px;
+      max-width: 30px;
+      margin: 0 20px;
+      padding: 3px;
+      padding-top: 5px;
+      transform: scale(1.5);
+    }
+
+    .fields p {
+      color: red;
+      font-size: medium;
+      font-weight: 500;
+    }
+
+    @media (max-width: 1200px) {
+      .fields p {
+        font-size: small;
+        font-weight: 500;
+      }
+    }
+    @media (max-width: 992px) {
+      .fields p {
+        font-size: smaller;
+        padding: 5px;
+        font-weight: 500;
+      }
+
+      .fields {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .fields i {
+        display: none;
+      }
+    }
+    @media (max-width: 367px) {
+      .fields p {
+        font-size: 12px;
+        font-weight: 300;
+      }
+    }
+
+    @media (max-width: 355px) {
+      .fields p {
+        font-size: 11px;
+      }
+    }
+    @media (max-width: 332px) {
+      .fields p {
+        font-size: 10px;
+      }
+    }
+  </style>
   <body>
+    <div id="toastBox"></div>
     <!--=============== HEADER ===============-->
     <header class="header">
       <div class="header__top">
@@ -122,49 +285,81 @@
       <section class="login-register section--lg container">
         <div class="container1">
           <div class="signin-signup">
-            <form action="" class="sign-in-form form1">
+            <form
+              action=""
+              class="sign-in-form form1"
+              name="form"
+              onsubmit="return validation()"
+            >
               <h2 class="title">Login</h2>
-              <div class="input-field">
+              <div class="input-field" name="username" id="username">
                 <i class="fi fi-rs-user"></i>
                 <input type="text" placeholder="Username" />
               </div>
-              <div class="input-field">
+              <div class="input-field fields" id="username__error">
+                <i class="fi fi-rs-exclamation"></i>
+                <p>USERNAME FIELD CANNOT BE EMPTY!!!</p>
+              </div>
+              <div class="input-field" name="password" id="password">
                 <i class="fi fi-rs-lock"></i>
                 <input type="password" placeholder="Password" />
               </div>
+              <div class="input-field fields" id="pass__error">
+                <i class="fi fi-rs-exclamation"></i>
+                <p>PASSWORD FIELD CANNOT BE EMPTY!!!</p>
+              </div>
               <input type="submit" value="Login" class="btn btn1" />
-              <p class="social-text">Or Login with social platform</p>
+              <p class="social-text">Or Login with a social platform</p>
               <div class="lr__social-links flex">
-                <a href="https://www.facebook.com/"
-                  ><i class="fi fi-brands-facebook lr__social-icon face"></i
-                ></a>
-                <a href="https://www.google.com/"
-                  ><i class="fi fi-brands-google lr__social-icon goog"></i
-                ></a>
-                <a href="https://www.linkedin.com/"
-                  ><i class="fi fi-brands-linkedin lr__social-icon link"></i
-                ></a>
-                <a href="https://twitter.com/i/flow/login"
-                  ><i class="fi fi-brands-twitter lr__social-icon twit"></i
-                ></a>
+                <a href="https://www.facebook.com/">
+                  <i class="fi fi-brands-facebook lr__social-icon face"></i>
+                </a>
+                <a href="https://www.google.com/">
+                  <i class="fi fi-brands-google lr__social-icon goog"></i>
+                </a>
+                <a href="https://www.linkedin.com/">
+                  <i class="fi fi-brands-linkedin lr__social-icon link"></i>
+                </a>
+                <a href="https://twitter.com/i/flow/login">
+                  <i class="fi fi-brands-twitter lr__social-icon twit"></i>
+                </a>
               </div>
               <p class="account-text">
                 Don't have an account? <a href="#" id="sign-up-btn2">Sign up</a>
               </p>
             </form>
-            <form action="" class="sign-up-form form1">
+
+            <form
+              action=""
+              name="form1"
+              id="form1"
+              class="sign-up-form form1"
+              onsubmit="return validation1()"
+            >
               <h2 class="title">Register</h2>
-              <div class="input-field">
+              <div class="input-field" name="username1" id="username1">
                 <i class="fi fi-rs-user"></i>
                 <input type="text" placeholder="Username" />
               </div>
-              <div class="input-field">
+              <div class="input-field fields" id="username1__error">
+                <i class="fi fi-rs-exclamation"></i>
+                <p>USERNAME FIELD CANNOT BE EMPTY!!!</p>
+              </div>
+              <div class="input-field" name="email1" id="email1">
                 <i class="fi fi-rs-envelope"></i>
                 <input type="text" placeholder="Email" />
               </div>
-              <div class="input-field">
+              <div class="input-field fields" id="email1__error">
+                <i class="fi fi-rs-exclamation"></i>
+                <p>EMAIL FIELD CANNOT BE EMPTY!!!</p>
+              </div>
+              <div class="input-field" name="password1" id="password1">
                 <i class="fi fi-rs-lock"></i>
                 <input type="password" placeholder="Password" />
+              </div>
+              <div class="input-field fields" id="pass1__error">
+                <i class="fi fi-rs-exclamation"></i>
+                <p>PASSWORD FIELD CANNOT BE EMPTY!!!</p>
               </div>
               <input type="submit" value="Register" class="btn btn1" />
               <p class="social-text">Or Register with social platform</p>
@@ -343,6 +538,99 @@
       sign_in_btn2.addEventListener("click", () => {
         container.classList.remove("sign-up-mode2");
       });
+
+      function validation() {
+        const usernameInput = document.querySelector("#username input");
+        const username = document.querySelector("#username");
+        const passwordInput = document.querySelector("#password input");
+        const password = document.querySelector("#password");
+        const usernameError = document.getElementById("username__error");
+        const passwordError = document.getElementById("pass__error");
+
+        let isValid = true;
+
+        if (usernameInput.value.trim() === "") {
+          usernameError.style.display = "flex";
+          username.style.border = "2px solid red";
+          username.focus();
+          isValid = false;
+        } else {
+          usernameError.style.display = "none";
+          username.style.border = "2px solid green";
+        }
+
+        if (passwordInput.value.trim() === "") {
+          passwordError.style.display = "flex";
+          password.style.border = "2px solid red";
+          password.focus();
+          isValid = false;
+        } else {
+          passwordError.style.display = "none";
+          password.style.border = "2px solid green";
+        }
+
+        return isValid;
+      }
+
+      function validation1() {
+        const usernameInput = document.querySelector("#username1 input");
+        const username = document.querySelector("#username1");
+        const passwordInput = document.querySelector("#password1 input");
+        const password = document.querySelector("#password1");
+        const emailInput = document.querySelector("#email1 input");
+        const email = document.querySelector("#email1");
+
+        const usernameError = document.getElementById("username1__error");
+        const passwordError = document.getElementById("pass1__error");
+        const emailError = document.getElementById("email1__error");
+
+        let isValid = true;
+
+        if (usernameInput.value.trim() === "") {
+          usernameError.style.display = "flex";
+          username.style.border = "2px solid red";
+          username.focus();
+          isValid = false;
+        } else {
+          usernameError.style.display = "none";
+          username.style.border = "2px solid green";
+        }
+
+        if (passwordInput.value.trim() === "") {
+          passwordError.style.display = "flex";
+          password.style.border = "2px solid red";
+          password.focus();
+          isValid = false;
+        } else {
+          passwordError.style.display = "none";
+          password.style.border = "2px solid green";
+        }
+
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (
+          emailInput.value.trim() === "" ||
+          !emailPattern.test(emailInput.value)
+        ) {
+          emailError.style.display = "flex";
+          email.style.border = "2px solid red";
+          email.focus();
+          isValid = false;
+          if (!emailPattern.test(emailInput.value)) {
+            emailError.querySelector("p").textContent =
+              "EMAIL ADDRESS IS NOT CORRECT";
+          }
+        } else {
+          emailError.style.display = "none";
+          email.style.border = "2px solid green";
+          emailError.querySelector("p").textContent = ""; // Clear previous error message
+        }
+
+        // if (username.style.border === "2px solid green") {
+        //   showToast(registerMsg);
+        // }
+
+        return isValid;
+      }
     </script>
   </body>
 </html>
